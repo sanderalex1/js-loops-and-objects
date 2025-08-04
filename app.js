@@ -295,6 +295,6 @@ const functionName = "Hello World!"; // <--- You're allowed to modify this strin
 
 ({
   [functionName]() {
-    document.getElementsByTagName("p")[0].textContent = functionName;
+    document.body.firstElementChild.textContent = functionName;
   },
 })[functionName]();
