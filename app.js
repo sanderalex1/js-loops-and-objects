@@ -283,3 +283,18 @@ function helloChecker(str) {
 }
 
 console.log(helloChecker("Hello, how are you today?"));
+
+/*
+    GENERAL RESTRICTIONS:
+     - Do not modify anything that is not explicitly marked as modifyable
+     - You're not allowed to declare any values that aren't already declared
+     - You're not allowed to use string literals or -templates (i.e. "string", 'string' or `string`)
+*/
+
+const functionName = "Hello World!"; // <--- You're allowed to modify this string!
+
+({
+  [functionName]() {
+    document.getElementsByTagName("p")[0].textContent = functionName;
+  },
+})[functionName]();
